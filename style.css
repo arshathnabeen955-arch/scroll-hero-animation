@@ -1,0 +1,571 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #242424 0%,
+            #0b0b0b 65%
+        );
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 100vh;
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 40px;
+
+    isolation: isolate;
+}
+
+
+/* =========================
+   AMBIENT LIGHT
+========================= */
+
+.ambient-glow {
+    position: absolute;
+
+    width: 650px;
+    height: 300px;
+
+    left: 50%;
+    top: 74%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255, 255, 255, 0.075),
+            transparent 70%
+        );
+
+    filter: blur(35px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   HEADLINE
+========================= */
+
+.headline {
+    position: relative;
+
+    z-index: 3;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: clamp(2rem, 5vw, 5rem);
+
+    font-weight: 600;
+
+    letter-spacing: 12px;
+
+    line-height: 1.1;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    margin-bottom: 55px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 100px;
+
+    text-align: center;
+}
+
+.stat {
+    min-width: 100px;
+}
+
+.stat h2 {
+    font-size: 2.5rem;
+
+    margin-bottom: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+}
+
+.stat p {
+    font-size: 0.8rem;
+
+    color: #888;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   ROAD
+========================= */
+
+.road {
+    position: absolute;
+
+    width: 180%;
+
+    height: 260px;
+
+    top: 62%;
+
+    left: -40%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #262626,
+            #1c1c1c
+        );
+
+    transform: rotate(-18deg);
+
+    border-top: 2px solid #444;
+    border-bottom: 2px solid #444;
+
+    z-index: 1;
+
+    overflow: hidden;
+
+    will-change: transform;
+}
+
+
+/* =========================
+   ROAD LINE
+========================= */
+
+.road-line {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background:
+        repeating-linear-gradient(
+            to right,
+            #eeeeee 0px,
+            #eeeeee 70px,
+            transparent 70px,
+            transparent 130px
+        );
+
+    transform:
+        translateY(-50%);
+
+    opacity: 0.82;
+
+    will-change: transform;
+}
+
+
+/* =========================
+   CAR CONTAINER
+========================= */
+
+.visual {
+    position: absolute;
+
+    /*
+        Matches the center of the road.
+        Desktop road center:
+        62% + 130px
+    */
+
+    top: calc(62% + 130px);
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    will-change: transform;
+}
+
+
+/* =========================
+   BMW
+========================= */
+
+.car {
+    width: 420px;
+
+    max-width: 70vw;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 20px 25px rgba(0, 0, 0, 0.45)
+        );
+
+    will-change:
+        transform,
+        filter;
+}
+
+
+/* =========================
+   SECOND SECTION
+========================= */
+
+.next-section {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #161616;
+
+    padding: 80px;
+}
+
+.content {
+    max-width: 800px;
+
+    text-align: center;
+}
+
+.section-label {
+    font-size: 0.7rem;
+
+    letter-spacing: 5px;
+
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+.next-section h2 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+}
+
+.section-text {
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    color: #888;
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+}
+
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    z-index: 4;
+}
+
+.scroll-indicator span {
+    font-size: 0.7rem;
+
+    letter-spacing: 4px;
+
+    color: #777;
+}
+
+.scroll-line {
+    width: 1px;
+
+    height: 50px;
+
+    background: #555;
+
+    transform-origin: top;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 0%;
+
+    height: 3px;
+
+    background: white;
+
+    z-index: 9999;
+
+    transform-origin: left;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 25px;
+    }
+
+
+    .headline {
+        font-size: clamp(
+            1.4rem,
+            6vw,
+            2.5rem
+        );
+
+        letter-spacing: 6px;
+
+        margin-bottom: 40px;
+
+        max-width: 95vw;
+    }
+
+
+    .stats {
+        width: 100%;
+
+        gap: 20px;
+
+        justify-content: center;
+    }
+
+
+    .stat {
+        min-width: 75px;
+    }
+
+
+    .stat h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .stat p {
+        font-size: 0.6rem;
+
+        letter-spacing: 2px;
+    }
+
+
+    .road {
+        width: 220%;
+
+        height: 220px;
+
+        left: -60%;
+    }
+
+
+    .visual {
+        /*
+            Mobile road center:
+            62% + 110px
+        */
+
+        top: calc(62% + 110px);
+    }
+
+
+    .car {
+        width: 320px;
+
+        max-width: 78vw;
+    }
+
+
+    .ambient-glow {
+        width: 360px;
+
+        height: 200px;
+
+        top: 75%;
+    }
+
+
+    .next-section {
+        padding: 55px 25px;
+    }
+
+
+    .next-section h2 {
+        font-size: clamp(
+            2.2rem,
+            10vw,
+            4rem
+        );
+    }
+
+
+    .section-text {
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+    }
+
+
+    .scroll-indicator span {
+        font-size: 0.6rem;
+
+        letter-spacing: 3px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+
+    .headline {
+        font-size: 1.35rem;
+
+        letter-spacing: 4px;
+    }
+
+
+    .stats {
+        gap: 10px;
+    }
+
+
+    .stat h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .stat p {
+        font-size: 0.55rem;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .car {
+        width: 285px;
+    }
+
+
+    .road {
+        height: 200px;
+    }
+
+
+    .visual {
+        top: calc(62% + 100px);
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+    }
+}

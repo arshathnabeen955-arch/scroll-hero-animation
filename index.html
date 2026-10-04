@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="A scroll-driven interactive hero experience."
+    >
+
+    <link
+        rel="preload"
+        as="image"
+        href="images/bmw-m4.png"
+    >
+
+    <!-- Headline Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <title>Scroll Hero Animation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         SCROLL PROGRESS
+    ========================== -->
+
+    <div class="progress-bar"></div>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero">
+
+        <!-- Subtle cinematic lighting -->
+        <div
+            class="ambient-glow"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- HEADLINE -->
+
+        <h1 class="headline">
+            WELCOME ITZFIZZ
+        </h1>
+
+
+        <!-- STATS -->
+
+        <div class="stats">
+
+            <div class="stat">
+                <h2
+                    class="counter"
+                    data-value="87"
+                >
+                    0%
+                </h2>
+
+                <p>Performance</p>
+            </div>
+
+
+            <div class="stat">
+                <h2
+                    class="counter"
+                    data-value="92"
+                >
+                    0%
+                </h2>
+
+                <p>Experience</p>
+            </div>
+
+
+            <div class="stat">
+                <h2
+                    class="counter"
+                    data-value="76"
+                >
+                    0%
+                </h2>
+
+                <p>Engagement</p>
+            </div>
+
+        </div>
+
+
+        <!-- DRIVING ROAD -->
+
+        <div
+            class="road"
+            aria-hidden="true"
+        >
+
+            <div class="road-line"></div>
+
+        </div>
+
+
+        <!-- BMW -->
+
+        <div class="visual">
+
+            <img
+                class="car"
+                src="images/bmw-m4.png"
+                alt="BMW M4"
+            >
+
+        </div>
+
+
+        <!-- SCROLL INDICATOR -->
+
+        <div class="scroll-indicator">
+
+            <span>SCROLL TO EXPLORE</span>
+
+            <div class="scroll-line"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SECOND SECTION
+    ========================== -->
+
+    <section class="next-section">
+
+        <div class="content">
+
+            <p class="section-label">
+                THE EXPERIENCE
+            </p>
+
+            <h2>
+                Built for speed.<br>
+                Designed to move.
+            </h2>
+
+            <p class="section-text">
+                Smooth motion, interactive visuals and scroll-driven
+                experiences come together in one modern interface.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         GSAP
+    ========================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+    </script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js">
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
